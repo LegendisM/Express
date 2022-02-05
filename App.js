@@ -1,6 +1,7 @@
 // TODO: Load express and Create Instance For Global Variable app
 global.App = require("express")();
-global.Mysql = require("./database/db.js").GetDB();
+// TODO: Disabled global.Mysql = require("./database/db.js").GetDB();
+
 // TODO: Load Routes
 const IndexRoute = require("./routes/index.js");
 
