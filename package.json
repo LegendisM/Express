@@ -2,7 +2,7 @@
   "name": "express",
   "version": "1.0.0",
   "description": "The First Express Project",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "test": "node index.js"
   },
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/LegendisM/Express#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.2"
   }
 }
