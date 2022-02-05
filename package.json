@@ -1,0 +1,24 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "The First Express Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LegendisM/Express.git"
+  },
+  "keywords": [
+    "express",
+    "packages",
+    "plugins"
+  ],
+  "author": "LegendisM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LegendisM/Express/issues"
+  },
+  "homepage": "https://github.com/LegendisM/Express#readme"
+}
