@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/LegendisM/Express/issues"
   },
-  "homepage": "https://github.com/LegendisM/Express#readme"
+  "homepage": "https://github.com/LegendisM/Express#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
