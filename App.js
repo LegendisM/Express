@@ -1,14 +1,8 @@
 // TODO: Load express and Create Instance For Global Variable app
-global.app = require("express")();
-
-// TODO: Load Classes
-
-
-// TODO: Listen to Main Root
-app.get("/",(request,response)=>
-{
-    
-});
+global.App = require("express")();
+global.Mysql = require("./database/db.js").GetDB();
+// TODO: Load Routes
+const IndexRoute = require("./routes/index.js");
 
 // TODO: Bind App To Port 300
-app.listen(3000,()=>{console.log("Server Run With Port 3000")});
+App.listen(3000,()=>{console.log("Server Run With Port 3000")});
