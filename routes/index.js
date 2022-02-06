@@ -1,9 +1,9 @@
-// TODO : Load Classes
-let authentication = require("./authentication/authentication");
-const blog = require("./blog/blog");
+const express = require("express");
+const router = express.Router();
 
-// TODO: Listen to Main Root
-App.get("/",(request,response)=>
+router.get("/",(request,response)=>
 {
     response.render('index',{title:"Index Page",test:"Welcome Mannn"});
 });
+
+App.use(router);

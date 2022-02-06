@@ -1,17 +1,22 @@
+const express = require("express");
+const router = express.Router();
+
 // TODO: Route Of Login
-App.get("/login" , (request,response)=>
+router.get("/login" , (request,response)=>
 {
-    response.send('Welcome to Login screen Route');
+    response.render('authentication/login');
 })
 
 // TODO: Route Of Register
-App.get("/register" , (request,response)=>
+router.get("/register" , (request,response)=>
 {
-    response.send('Welcome to Register screen Route');
+    response.render('authentication/register');
 })
 
 // TODO: Route Of ForgotPassword
-App.get("/forgotPassword" , (request,response)=>
+router.get("/forgotPassword" , (request,response)=>
 {
-    response.send('Welcome to ForgotPassword screen Route');
+    response.render('authentication/forgotPassword');
 })
+
+App.use(router);

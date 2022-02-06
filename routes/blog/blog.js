@@ -1,7 +1,10 @@
+const express = require("express");
+const router = express.Router();
+
 // TODO: Route Of Main Blog Page
-App.get("/blog",(request,response)=>
+router.get("/blog",(request,response)=>
 {
-    response.send(" This is A Main Page Of Blog Section");
+    response.render('blog/blog');
 })
 
-// TODO: Route Of Post Blog Page
+App.use(router);

@@ -11,8 +11,10 @@ App.use(express.static('public'));
 App.use(express.json());
 App.use(express.urlencoded({extended:true}));
 
-// TODO: Load Routes
-const IndexRoute = require("./routes/index.js");
+// TODO: Import Routers
+const IndexRouter = require("./routes/index");
+const AuthenticationRouter = require("./routes/authentication/authentication");
+const BlogRouter = require("./routes/blog/blog");
 
 // TODO: Bind App To Port 300
 App.listen(3000,()=>{console.log("Server Run With Port 3000")});
