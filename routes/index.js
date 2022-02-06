@@ -5,5 +5,5 @@ const blog = require("./blog/blog");
 // TODO: Listen to Main Root
 App.get("/",(request,response)=>
 {
-    response.send("test");
+    response.render('index',{title:"Index Page",test:"Welcome Mannn"});
 });

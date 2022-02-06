@@ -1,6 +1,15 @@
+// TODO: Import Libraries
+const express = require("express");
+
 // TODO: Load express and Create Instance For Global Variable app
-global.App = require("express")();
-// TODO: Disabled global.Mysql = require("./database/db.js").GetDB();
+global.App = express();
+// global.Mysql = require("./database/db.js").GetDB();
+
+// TODO: App Config
+App.set('view engine','ejs');
+App.use(express.static('public'));
+App.use(express.json());
+App.use(express.urlencoded({extended:true}));
 
 // TODO: Load Routes
 const IndexRoute = require("./routes/index.js");
