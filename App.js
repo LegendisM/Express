@@ -5,6 +5,10 @@ const express = require("express");
 global.App = express();
 // global.Mysql = require("./database/db.js").GetDB();
 
+// TODO: Load Controllers
+global.UserModel = require("./models/user/User");
+global.BlogModel = require("./models/blog/Blog");
+
 // TODO: App Config
 App.set('view engine','ejs');
 App.use(express.static('public'));
