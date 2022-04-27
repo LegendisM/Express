@@ -1,5 +1,5 @@
 function Home (request,response) {
-    response.send("Home Page");
+    response.render("index",{title:"Home Page"});
 }
 
 export {
