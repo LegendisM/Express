@@ -22,6 +22,13 @@ const homeRoutes = require('./routes/home');
 app.use(homeRoutes);
 
 /*
+* Page Not Found - Last Section
+*/
+app.use((req,res) => {
+    res.send("404 Page Not Found");
+});
+
+/*
 * Listen
 */
 app.listen(3000,() => {
