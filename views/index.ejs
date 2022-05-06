@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/bootstrap-rtl.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <form class="form-group row col-2 m-auto p-2" action="/admin/add-todo" method="post">
+            <input class="form-control mb-2" type="text" name="todo" id="todo" placeholder="Enter Text of Todo">
+            <input class="btn btn-danger m-auto" type="submit" value="Submit">
+        </form>
+    </body>
+</html>
