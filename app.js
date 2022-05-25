@@ -24,16 +24,11 @@ app.use(express.static(path.join(__dirname,"node_modules","font-awesome")));
 */
 const homeRoutes = require('./routes/home');
 const adminRoutes = require('./routes/admin');
+const errorRoutes = require('./routes/error');
 
 app.use(homeRoutes);
 app.use("/admin",adminRoutes)
-
-/*
-* Page Not Found - Last Section
-*/
-app.use((req,res) => {
-    res.send("404 Page Not Found");
-});
+app.use(errorRoutes);
 
 /*
 * Listen
