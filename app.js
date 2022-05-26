@@ -3,6 +3,7 @@
 */
 const express = require('express');
 const path = require('path');
+const database = require('./database/database');
 
 /*
 * Create App Instance
@@ -20,15 +21,17 @@ app.use(express.static(path.join(__dirname,"node_modules","bootstrap-v4-rtl","di
 app.use(express.static(path.join(__dirname,"node_modules","font-awesome")));
 
 /*
-* Load Models|Controller|Routers
+* Database
 */
-const homeRoutes = require('./routes/home');
-const adminRoutes = require('./routes/admin');
-const errorRoutes = require('./routes/error');
+database.sync().then((result) => {
+    console.log("Database Ready . . . ");
+}).catch(err => console.log(err));
 
-app.use(homeRoutes);
-app.use("/admin",adminRoutes)
-app.use(errorRoutes);
+/*
+* Routes
+*/
+const Routes = require('./routes/init');
+app.use(Routes);
 
 /*
 * Listen
