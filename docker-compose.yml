@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/data/db
+  express:
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+
+volumes:
+  db: {}
